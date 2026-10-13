@@ -1,0 +1,9 @@
+{
+  "name": "lendnest-local-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local full-stack LendNest rental marketplace prototype",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Mirrorless Camera",
+    "category": "Electronics",
+    "price": 650,
+    "area": "Adyar",
+    "emoji": "📷",
+    "description": "A compact camera for trips, events and weekend projects.",
+    "available": true
+  },
+  {
+    "id": 2,
+    "name": "Cordless Drill Kit",
+    "category": "Tools",
+    "price": 180,
+    "area": "Thiruvanmiyur",
+    "emoji": "🛠️",
+    "description": "A handy drill set for simple home improvement tasks.",
+    "available": true
+  },
+  {
+    "id": 3,
+    "name": "Badminton Racket Set",
+    "category": "Sports",
+    "price": 120,
+    "area": "Palavakkam",
+    "emoji": "🏸",
+    "description": "Two rackets for a friendly game at the court.",
+    "available": true
+  },
+  {
+    "id": 4,
+    "name": "Portable Projector",
+    "category": "Electronics",
+    "price": 400,
+    "area": "Besant Nagar",
+    "emoji": "📽️",
+    "description": "Make movie night or a small presentation more fun.",
+    "available": true
+  },
+  {
+    "id": 5,
+    "name": "Camping Tent",
+    "category": "Home",
+    "price": 300,
+    "area": "Adyar",
+    "emoji": "⛺",
+    "description": "A lightweight tent for a weekend outdoor adventure.",
+    "available": true
+  },
+  {
+    "id": 6,
+    "name": "Toolbox Set",
+    "category": "Tools",
+    "price": 150,
+    "area": "Velachery",
+    "emoji": "🧰",
+    "description": "A basic set of tools for everyday fixes.",
+    "available": true
+  }
+]

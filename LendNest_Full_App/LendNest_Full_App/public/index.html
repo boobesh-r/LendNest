@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LendNest — Borrow more, buy less</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="logo">⌂</span><span>Lend<span class="purple">Nest</span></span></a>
+  <nav><a href="#explore">Explore</a><a href="#how">How it works</a><button class="btn btn-sm" id="openListingTop">＋ List an item</button></nav>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">A smarter way to share</span>
+      <h1>Borrow more.<br><em>Buy less.</em></h1>
+      <p>Find useful things nearby, rent them when you need them, and help your neighbours earn from items they already own.</p>
+      <div class="actions"><a class="btn" href="#explore">Explore items ↓</a><button class="btn btn-light" id="openListingHero">＋ List your item</button></div>
+      <div class="hero-points"><span>✓ Community-first</span><span>✓ Simple booking</span><span>✓ Pilot-ready demo</span></div>
+    </div>
+    <div class="hero-art" aria-hidden="true"><div class="orb">🧰</div><div class="float f1">🏠 Neighbourhood rentals<small>Useful things, closer to you</small></div><div class="float f2">♻️ Share more<small>Waste less together</small></div></div>
+  </section>
+
+  <section class="stats">
+    <div><strong id="itemCount">—</strong><span>items listed</span></div><div><strong id="bookingCount">—</strong><span>demo bookings</span></div><div><strong>₹0</strong><span>to test locally</span></div>
+  </section>
+
+  <section id="explore" class="section">
+    <div class="section-head"><div><h2>Discover rentals</h2><p>Handy things for the moments you need them.</p></div><button class="btn btn-light btn-sm" id="openListingSection">＋ Add a listing</button></div>
+    <div class="search-row"><input id="search" type="search" placeholder="Search item, category or pickup area…"><span id="resultCount" class="muted"></span></div>
+    <div class="chips" id="chips">
+      <button class="chip active" data-cat="All">All items</button><button class="chip" data-cat="Electronics">Electronics</button><button class="chip" data-cat="Tools">Tools</button><button class="chip" data-cat="Sports">Sports</button><button class="chip" data-cat="Home">Home</button>
+    </div>
+    <div class="item-grid" id="itemGrid"><div class="empty">Loading LendNest listings…</div></div>
+  </section>
+
+  <section id="how" class="section">
+    <div class="section-head"><div><h2>How LendNest works</h2><p>Three simple steps to get what you need.</p></div></div>
+    <div class="steps"><article><span>01</span><h3>Find what you need</h3><p>Browse items and check the daily rental price and pickup area.</p></article><article><span>02</span><h3>Request a booking</h3><p>Choose a rental duration and create a booking request.</p></article><article><span>03</span><h3>Arrange pickup</h3><p>Use the demo pickup code as a prototype of a future locker flow.</p></article></div>
+  </section>
+
+  <section class="section admin">
+    <div class="section-head"><div><h2>Booking dashboard</h2><p>Bookings created on this computer.</p></div><button class="btn btn-light btn-sm" id="refreshBookings">↻ Refresh</button></div>
+    <div id="bookingList" class="booking-list"><p class="muted">Loading bookings…</p></div>
+  </section>
+  <aside class="notice"><strong>Prototype status:</strong> This app has a working local backend and stores listings/bookings on your computer. It does not yet process real payments, authenticate users, or unlock physical lockers. Do not enter sensitive personal information.</aside>
+  <footer><span>© 2026 LendNest · Local pilot prototype</span><span>Built to validate the idea before investing in hardware.</span></footer>
+</main>
+
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><div class="modal-head"><h2 id="modalTitle">Create listing</h2><button id="closeModal" class="x" aria-label="Close">×</button></div><div id="modalBody"></div></div></div>
+<div id="toast" class="toast" role="status"></div>
+<script src="/app.js"></script>
+</body></html>
