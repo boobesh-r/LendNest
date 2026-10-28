@@ -31,7 +31,8 @@ WORKDIR /app
 # Set production environment
 ENV NODE_ENV=production
 ENV PORT=5000
-ENV DATABASE_PATH=/app/database/lendnest.sqlite
+ENV DATABASE_PATH=/app/data/lendnest.sqlite
+ENV UPLOADS_DIR=/app/data/uploads
 ENV FRONTEND_DIST=/app/frontend/dist
 
 # Install only production dependencies for the backend
@@ -43,14 +44,15 @@ RUN npm ci --omit=dev
 COPY --from=backend-builder /app/backend/dist ./dist
 COPY --from=frontend-builder /app/frontend/dist /app/frontend/dist
 
-# Create database directory for persistent volume mount
-RUN mkdir -p /app/database
+# Create persistent data directory for SQLite database and uploaded media
+RUN mkdir -p /app/data
 
 # Expose HTTP port
 EXPOSE 5000
 
-# Volume mount point for SQLite database persistence
-VOLUME ["/app/database"]
+# Volume mount point for unified data persistence (database + uploads + backups)
+VOLUME ["/app/data"]
+
 
 # Launch compiled backend server
 CMD ["node", "dist/server.js"]
