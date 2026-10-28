@@ -2,13 +2,19 @@
   "name": "lendnest-platform",
   "version": "1.0.0",
   "description": "LendNest — Smart Rental & Sharing Platform (Borrow Smart. Share More.)",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
   "scripts": {
     "dev:backend": "cd backend && npm run dev",
     "dev:frontend": "cd frontend && npm run dev",
     "dev": "npx concurrently -n \"BACKEND,FRONTEND\" -c \"cyan,magenta\" \"npm run dev:backend\" \"npm run dev:frontend\"",
     "build:backend": "cd backend && npm run build",
     "build:frontend": "cd frontend && npm run build",
-    "build": "npm run build:backend && npm run build:frontend",
+    "build": "npm run build:frontend",
+    "build:all": "npm run build:backend && npm run build:frontend",
     "seed": "cd backend && npm run seed",
     "test": "cd backend && npm test",
     "start": "cd backend && npm start"
